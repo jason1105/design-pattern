@@ -1,4 +1,4 @@
-package com.lvw.designpattern.gof.maze;
+package com.lvw.designpattern.gof.maze.default_;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,10 +12,17 @@ public class Maze {
     }
 
     public void AddRoom(Room room) {
-        rooms.put(room._roomNumber, room);
+        rooms.put(room.get_roomNumber(), room);
     }
 
     Room RoomNumber(int roomNumber) {
         return rooms.get(roomNumber);
+    }
+
+    @Override
+    public String toString() {
+        return "Maze{" +
+                "rooms=" + rooms +
+                '}';
     }
 }

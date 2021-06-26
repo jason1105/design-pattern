@@ -1,20 +1,22 @@
 package com.lvw.designpattern.gof.client;
 
-import com.lvw.designpattern.gof.maze.*;
+import com.lvw.designpattern.gof.maze.Direction;
+import com.lvw.designpattern.gof.maze.MazeFactory;
 import com.lvw.designpattern.gof.maze.bombed.BombedMazeFactory;
-import com.lvw.designpattern.gof.maze.default_.DefaultMazeFactory;
+import com.lvw.designpattern.gof.maze.bombed.BombedWall;
+import com.lvw.designpattern.gof.maze.bombed.RoomWithABomb;
 import com.lvw.designpattern.gof.maze.default_.Door;
 import com.lvw.designpattern.gof.maze.default_.Maze;
 import com.lvw.designpattern.gof.maze.default_.Room;
 
 // Client source.
-public class MazeGame {
+public class MazeGameBomb<R> {
 
     public static void main(String[] args) {
 
         // use abstract factory to create various game of type
-        MazeGame game = new MazeGame();
-        Maze maze = game.CreateMaze(new DefaultMazeFactory());
+        MazeGameBomb<Room> bombGame = new MazeGameBomb();
+        Maze maze = bombGame.CreateMaze(new BombedMazeFactory());
         System.out.println(maze);
 
     }
@@ -26,8 +28,8 @@ public class MazeGame {
         */
         Maze maze = factory.MakeMaze();
 
-        Room r1 = factory.MakeRoom(1);
-        Room r2 = factory.MakeRoom(2);
+        RoomWithABomb r1 = (RoomWithABomb)factory.MakeRoom(1);
+        RoomWithABomb r2 = (RoomWithABomb)factory.MakeRoom(2);
         Door door = factory.MakeDoor(r1, r2);
 
         r1.SetSide(Direction.East, door);
@@ -42,6 +44,9 @@ public class MazeGame {
 
         maze.AddRoom(r1);
         maze.AddRoom(r2);
+
+        System.out.println(r1.getBomb());
+        System.out.println(((BombedWall) r1.GetSide(Direction.North)).getBomb());
 
         return maze;
     }
