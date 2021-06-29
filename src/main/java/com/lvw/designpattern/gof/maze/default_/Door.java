@@ -20,8 +20,8 @@ public class Door implements MapSite {
     @Override
     public String toString() {
         return "Door{" +
-                "_room1=" + _room1 +
-                ", _room2=" + _room2 +
+                "_room1=" + _room1.get_roomNumber() +
+                ", _room2=" + _room2.get_roomNumber() +
                 ", _isOpen=" + _isOpen +
                 '}';
     }
