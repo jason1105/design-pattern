@@ -1,6 +1,6 @@
-package com.lvw.designpattern.gof.maze.default_;
+package com.lvw.designpattern.gof.factory.maze.default_;
 
-import com.lvw.designpattern.gof.maze.MazeFactory;
+import com.lvw.designpattern.gof.factory.maze.MazeFactory;
 
 public class DefaultMazeFactory implements MazeFactory {
 

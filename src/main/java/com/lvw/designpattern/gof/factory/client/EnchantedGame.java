@@ -1,9 +1,9 @@
-package com.lvw.designpattern.gof.client;
+package com.lvw.designpattern.gof.factory.client;
 
-import com.lvw.designpattern.gof.maze.MazeFactory;
-import com.lvw.designpattern.gof.maze.default_.Maze;
-import com.lvw.designpattern.gof.maze.default_.Room;
-import com.lvw.designpattern.gof.maze.enchanted.EnchantedMazeFactory;
+import com.lvw.designpattern.gof.factory.maze.MazeFactory;
+import com.lvw.designpattern.gof.factory.maze.default_.Maze;
+import com.lvw.designpattern.gof.factory.maze.default_.Room;
+import com.lvw.designpattern.gof.factory.maze.enchanted.EnchantedMazeFactory;
 
 // Client source.
 public class EnchantedGame<R> {

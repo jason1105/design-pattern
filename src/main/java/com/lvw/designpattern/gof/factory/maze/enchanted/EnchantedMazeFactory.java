@@ -1,10 +1,10 @@
-package com.lvw.designpattern.gof.maze.enchanted;
+package com.lvw.designpattern.gof.factory.maze.enchanted;
 
-import com.lvw.designpattern.gof.maze.default_.Door;
-import com.lvw.designpattern.gof.maze.MazeFactory;
-import com.lvw.designpattern.gof.maze.default_.Maze;
-import com.lvw.designpattern.gof.maze.default_.Room;
-import com.lvw.designpattern.gof.maze.default_.Wall;
+import com.lvw.designpattern.gof.factory.maze.default_.Door;
+import com.lvw.designpattern.gof.factory.maze.MazeFactory;
+import com.lvw.designpattern.gof.factory.maze.default_.Maze;
+import com.lvw.designpattern.gof.factory.maze.default_.Room;
+import com.lvw.designpattern.gof.factory.maze.default_.Wall;
 
 // omitted implements
 public class EnchantedMazeFactory implements MazeFactory {

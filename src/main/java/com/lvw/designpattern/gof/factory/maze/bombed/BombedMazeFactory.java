@@ -1,7 +1,7 @@
-package com.lvw.designpattern.gof.maze.bombed;
+package com.lvw.designpattern.gof.factory.maze.bombed;
 
-import com.lvw.designpattern.gof.maze.MazeFactory;
-import com.lvw.designpattern.gof.maze.default_.*;
+import com.lvw.designpattern.gof.factory.maze.MazeFactory;
+import com.lvw.designpattern.gof.factory.maze.default_.*;
 
 public class BombedMazeFactory implements MazeFactory {
 

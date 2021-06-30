@@ -1,4 +1,4 @@
-package com.lvw.designpattern.gof.maze.default_;
+package com.lvw.designpattern.gof.factory.maze.default_;
 
 import java.util.HashMap;
 import java.util.Map;

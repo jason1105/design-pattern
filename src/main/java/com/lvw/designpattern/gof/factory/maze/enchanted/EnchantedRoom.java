@@ -1,6 +1,6 @@
-package com.lvw.designpattern.gof.maze.enchanted;
+package com.lvw.designpattern.gof.factory.maze.enchanted;
 
-import com.lvw.designpattern.gof.maze.default_.Room;
+import com.lvw.designpattern.gof.factory.maze.default_.Room;
 
 public class EnchantedRoom extends Room {
 

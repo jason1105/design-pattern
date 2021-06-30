@@ -1,8 +1,7 @@
-package com.lvw.designpattern.gof.client;
+package com.lvw.designpattern.gof.factory.client;
 
-import com.lvw.designpattern.gof.maze.*;
-import com.lvw.designpattern.gof.maze.bombed.BombedMazeFactory;
-import com.lvw.designpattern.gof.maze.default_.*;
+import com.lvw.designpattern.gof.factory.maze.*;
+import com.lvw.designpattern.gof.factory.maze.default_.*;
 
 // Client source.
 public class MazeGame {

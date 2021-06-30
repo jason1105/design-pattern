@@ -1,15 +1,9 @@
-package com.lvw.designpattern.gof.client;
+package com.lvw.designpattern.gof.factory.client;
 
-import com.lvw.designpattern.gof.maze.Direction;
-import com.lvw.designpattern.gof.maze.MazeBuilder;
-import com.lvw.designpattern.gof.maze.MazeFactory;
-import com.lvw.designpattern.gof.maze.bombed.BombedMazeBuilder;
-import com.lvw.designpattern.gof.maze.bombed.BombedMazeFactory;
-import com.lvw.designpattern.gof.maze.bombed.BombedWall;
-import com.lvw.designpattern.gof.maze.bombed.RoomWithABomb;
-import com.lvw.designpattern.gof.maze.default_.Door;
-import com.lvw.designpattern.gof.maze.default_.Maze;
-import com.lvw.designpattern.gof.maze.default_.Room;
+import com.lvw.designpattern.gof.factory.maze.MazeBuilder;
+import com.lvw.designpattern.gof.factory.maze.bombed.BombedMazeBuilder;
+import com.lvw.designpattern.gof.factory.maze.default_.Maze;
+import com.lvw.designpattern.gof.factory.maze.default_.Room;
 
 // Client source.
 public class MazeGameBomb<R> {

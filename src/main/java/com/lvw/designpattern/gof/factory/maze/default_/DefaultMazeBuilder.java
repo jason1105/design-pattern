@@ -1,23 +1,19 @@
-package com.lvw.designpattern.gof.maze.bombed;
+package com.lvw.designpattern.gof.factory.maze.default_;
 
-import com.lvw.designpattern.gof.maze.Direction;
-import com.lvw.designpattern.gof.maze.MazeBuilder;
-import com.lvw.designpattern.gof.maze.MazeFactory;
-import com.lvw.designpattern.gof.maze.default_.DefaultMazeFactory;
-import com.lvw.designpattern.gof.maze.default_.Door;
-import com.lvw.designpattern.gof.maze.default_.Maze;
-import com.lvw.designpattern.gof.maze.default_.Room;
+import com.lvw.designpattern.gof.factory.maze.Direction;
+import com.lvw.designpattern.gof.factory.maze.MazeBuilder;
+import com.lvw.designpattern.gof.factory.maze.MazeFactory;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class BombedMazeBuilder implements MazeBuilder {
+public class DefaultMazeBuilder implements MazeBuilder {
 
-    MazeFactory factory = new BombedMazeFactory();
+    MazeFactory factory = new DefaultMazeFactory();
     Maze maze;
-    Map<Integer, RoomWithABomb> rooms = new HashMap<>();
+    Map<Integer, Room> rooms = new HashMap<>();
 
-    public BombedMazeBuilder() {
+    public DefaultMazeBuilder() {
     }
 
     @Override
@@ -27,7 +23,7 @@ public class BombedMazeBuilder implements MazeBuilder {
 
     @Override
     public void BuildRoom(int roomNumber) {
-        RoomWithABomb room = (RoomWithABomb)factory.MakeRoom(roomNumber);
+        Room room = factory.MakeRoom(roomNumber);
         rooms.put(roomNumber, room);
         maze.AddRoom(room);
     }

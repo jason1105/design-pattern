@@ -1,7 +1,7 @@
-package com.lvw.designpattern.gof.maze.default_;
+package com.lvw.designpattern.gof.factory.maze.default_;
 
-import com.lvw.designpattern.gof.maze.Direction;
-import com.lvw.designpattern.gof.maze.MapSite;
+import com.lvw.designpattern.gof.factory.maze.Direction;
+import com.lvw.designpattern.gof.factory.maze.MapSite;
 
 import java.util.HashMap;
 import java.util.Map;
