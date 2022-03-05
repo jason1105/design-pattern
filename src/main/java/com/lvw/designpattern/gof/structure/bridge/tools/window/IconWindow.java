@@ -1,6 +1,7 @@
 package com.lvw.designpattern.gof.structure.bridge.tools.window;
 
 import com.lvw.designpattern.gof.structure.bridge.tools.PixPoint;
+import com.lvw.designpattern.gof.structure.bridge.tools.Point;
 import com.lvw.designpattern.gof.structure.bridge.tools.Window;
 
 /**
@@ -8,7 +9,8 @@ import com.lvw.designpattern.gof.structure.bridge.tools.Window;
  */
 public class IconWindow implements Window {
 
-    public void drawPix(PixPoint p0) {
-        getWindowImpl().drawPixel(p0);
+    @Override
+    public void drawWindow(Point p0, Point p1) {
+        // 绘制没有边线的窗口
     }
 }

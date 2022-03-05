@@ -27,7 +27,7 @@ public class CafeMenu implements Menu {
 	public Map<String, MenuItem> getItems() {
 		return menuItems;
 	}
-  
+
 	public Iterator<MenuItem> createIterator() {
 		return menuItems.values().iterator();
 	}

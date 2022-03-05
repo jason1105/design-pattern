@@ -15,6 +15,20 @@ import com.lvw.designpattern.gof.structure.bridge.tools.window_impl.WinWindowImp
  */
 public interface Window {
 
+    void drawWindow(Point p0, Point p1);
+
+    default void drawRect(Point p0, Point p1){
+        WindowImpl windowImpl = getWindowImpl();
+
+        Point p01 = new Point(p0.getX(), p0.getY() + p1.getY());
+        Point p11 = new Point(p1.getX(), p1.getY() - p1.getY());
+
+        windowImpl.drawLine(p0, p01);
+        windowImpl.drawLine(p01, p1);
+        windowImpl.drawLine(p1, p11);
+        windowImpl.drawLine(p11, p0);
+    }
+
     default WindowImpl getWindowImpl() {
 
         // also can use factory
